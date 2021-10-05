@@ -12,7 +12,6 @@ export class CharacterService {
 
 
    getCharacter(param : any) {
-     console.log(param)
            return this.http.get<any>('https://rickandmortyapi.com/api/character/' + param).toPromise();
         }
 }
