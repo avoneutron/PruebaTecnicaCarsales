@@ -1,11 +1,41 @@
-<ol>
-    <li>
-        Esto es un prueba
-    </li>
-    <li>
-        <button mat-raised-button (click)="openDialog()">Pick one</button>
-    </li>
-    <li *ngIf="animal">
-        You chose: <i>{{animal}}</i>
-    </li>
-</ol>
+<div class="col-md-12">
+  <div class="card-body">
+    <p>Episodio : <strong>{{Episodio}}</strong></p>
+    
+    <div *ngFor="let item of personaje" class="col-md-12">
+      <div class="col-md-12">
+        <div class="card mb-8 box-shadow">
+          <div class="card-body">
+            <p class="card-text mx-auto">
+              <strong>Personaje:</strong>
+              {{item.name}}
+            </p>
+            <p class="card-text mx-auto">
+              <strong>Estado:</strong>
+              {{item.status}}
+            </p>
+            <p>
+              <strong>Especie:</strong>
+              {{item.species}}
+            </p>
+            <p>
+              <strong>Genero:</strong>
+              {{item.gender}}
+            </p>
+            <p>
+              <strong>Ubicacion:</strong>
+              {{item.location.name}}
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">
+                <img src={{item.image}} class="rounded mx-auto d-block">
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -17,7 +17,7 @@ constructor(public http : HttpClient) {
 
 
   getlistEpisodio() {
-    return this.http.get(this.path).toPromise();
+      return this.http.get(this.path).toPromise();
   }
 
 }
